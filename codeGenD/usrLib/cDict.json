@@ -1,0 +1,51 @@
+{
+    "default": {
+        "headers": {
+            "main": "\n@headStr \n#ifndef _@unitFileName _H_\n#define _@unitFileName _H_\n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n/* interface\n*/\n@someDeclare \n\n#endif /* _@unitFileName _H_ */\n",
+            "headStr": " ",
+            "unitFileName": " ",
+            "dependency": " ",
+            "macro": " ",
+            "enum": " ",
+            "struct": " ",
+            "packa": "1",
+            "packb": " ",
+            "global": " ",
+            "someDeclare": " "
+        },
+        "source": {
+            "main": "\n@headStr \n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n/* interface\n*/\n@someDef \n\n",
+            "headStr": " ",
+            "dependency": " ",
+            "macro": " ",
+            "enum": " ",
+            "struct": " ",
+            "packa": "1",
+            "packb": " ",
+            "global": " ",
+            "someDef": " "
+        },
+        "enum": {
+            "main": "\ntypedef enum E_@code1 {\n    @enumDef \n}T_E_@code1 ;\n",
+            "code1": "UNTITLED",
+            "enumDef": " "
+        },
+        "struct": {
+            "main": "\ntypedef struct E_@code1 {\n    @structDef \n}T_E_@code1 ;\n",
+            "code1": "UNTITLED",
+            "structDef": " "
+        },
+        "func": {
+            "main": "\n@out  @funcName ( @paraList  )\n{\n    @codeBlock \n}\n",
+            "mainSide": "\n@out  @funcName ( @paraList  );\n",
+            "out": "unsigned int",
+            "paraList": "unsigned int input",
+            "funcName": " ",
+            "codeBlock": " "
+        },
+        "include": {
+            "main": "#include \"@fileName \" \n",
+            "fileName": "untitled.h"
+        }
+    }
+}

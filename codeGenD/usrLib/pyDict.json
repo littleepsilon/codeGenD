@@ -1,0 +1,25 @@
+{
+    "default": {
+        "class": {
+            "main": "\nclass @className ( @obj  ):\n    @init \n    @funcBlock \n",
+            "className": "untitled",
+            "obj": " ",
+            "init": " ",
+            "funcBlock": " "
+        },
+        "def": {
+            "main": "\ndef @funcName (@para ):\n    @funcBlock \n",
+            "funcName": "untitled",
+            "para": " ",
+            "funcBlock": "pass"
+        },
+        "layout": {
+            "main": "\n# -*- coding:utf-8 -*-\n@headers \n# import pyModule\n# import sys\n# import os\n\n# import 3rd-part Moudle\n@import1 \n# sys.path.append( os.path.split( os.path.realpath(__file__) )[0] + '' )\n@import2 \n# import usrModule\n@import3 \n\n@subjectBlock \n",
+            "headers": " ",
+            "import1": " ",
+            "import2": " ",
+            "import3": " ",
+            "subjectBlock": " "
+        }
+    }
+}
