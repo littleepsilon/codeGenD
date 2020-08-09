@@ -19,7 +19,7 @@ import json
 # import 3rd-part moudle 
 
 class c_cgbasic(object):
-    def __init__(self, logSwitch = True, dbgMode = True):
+    def __init__(self, logSwitch = False, dbgMode = False):
         self.name      = 'david'
         self.dbgMode   = dbgMode
         self.dbgHex    = True
