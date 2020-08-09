@@ -7,17 +7,20 @@
 # 
 
 import setuptools
-
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+# try:
+#     import pypandoc
+#     long_description = pypandoc.convert('README.md','rst')
+# except:
+#     with open("README.md", "r") as fh:
+#         long_description = fh.read()
 
 setuptools.setup(
     name="codeGenD",
-    version="0.0.4",
+    version="0.0.5",
     author="David Young",
     author_email="david_young11@163.com",
     description="A tiny code generate module",
-    long_description=long_description,
+    # long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/littleepsilon/codeGenD",
     packages=setuptools.find_packages(),

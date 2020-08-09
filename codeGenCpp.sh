@@ -1,6 +1,6 @@
 codeGenDir=$(cd "$(dirname "$0")"; pwd)
 
-cmdStr="python ${codeGenDir}/main.py"
+cmdStr="python ${codeGenDir}/codeGenD.py"
 
 ${cmdStr} -m argv -f system -l cpp -li MIT -n untitled -fl floader_1 floader_2 gener/floader_3
 

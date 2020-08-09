@@ -40,6 +40,27 @@ SOFTWARE.
    3. python
 2. single source code file generate
 
+## install
+
+```shell
+pip install codeGenD
+```
+
+or
+
+```shell
+make intall
+```
+
+or 
+```python
+python setup.py install
+```
+
+or
+
+run install.bat (in windows)
+
 ## details
 
 1. license generate
@@ -48,43 +69,45 @@ SOFTWARE.
 4. multi language code block template json file	
 
 ```
-├── codeGenD
-│   ├── basic
-│   │   ├── cgBasic.py
-│   │   └── __init__.py
-│   ├── __init__.py
-│   ├── interface
-│   │   ├── __init__.py
-│   │   └── interface.py
-│   ├── test
-│   │   ├── __init__.py
-│   │   └── test.py
-│   ├── usrLib
-│   │   ├── cDict.json
-│   │   ├── codeUnitMethod.py
-│   │   ├── cppDict.json
-│   │   ├── dictCpp.py
-│   │   ├── dictC.py
-│   │   ├── dictProvider.py
-│   │   ├── dictPython.py
-│   │   ├── __init__.py
-│   │   └── pyDict.json
-│   └── usrMethod
-│       ├── codeGenCpp.py
-│       ├── codeGenC.py
-│       ├── codeGenMethod.py
-│       ├── codeGenPy.py
-│       ├── __init__.py
-│       └── readmeMaterial.py
 ├── codeGenCpp.sh
+├── codeGenD
+│   ├── basic
+│   │   ├── cgBasic.py
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── interface
+│   │   ├── __init__.py
+│   │   └── interface.py
+│   ├── test
+│   │   ├── __init__.py
+│   │   └── test.py
+│   ├── usrLib
+│   │   ├── cDict.json
+│   │   ├── codeUnitMethod.py
+│   │   ├── cppDict.json
+│   │   ├── dictCpp.py
+│   │   ├── dictC.py
+│   │   ├── dictProvider.py
+│   │   ├── dictPython.py
+│   │   ├── __init__.py
+│   │   └── pyDict.json
+│   └── usrMethod
+│       ├── codeGenCpp.py
+│       ├── codeGenC.py
+│       ├── codeGenMethod.py
+│       ├── codeGenPy.py
+│       ├── __init__.py
+│       └── readmeMaterial.py
+├── codeGenD.py
 ├── codeGenPy.sh
-├── codeGenD.sh
+├── codeGen.sh
 ├── dist
-│   └── codeGenD-0.0.1.tar.gz
+│   └── codeGenD-0.0.5.tar.gz
+├── install.bat
 ├── LICENSE
-├── main.py
 ├── makefile
 ├── MANIFEST.in
+├── pack.bat
 ├── README.md
 ├── requirements.txt
 ├── setup.py
