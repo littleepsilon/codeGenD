@@ -32,6 +32,25 @@ def app(**kwargs):
     kwargs['fl'] ='usrLib usrMethod basic interface test'
     codeGenMethod(kwargs).generate()
 
+def src(**kwargs):
+    kwargs['f']  ='unit'
+    codeGenMethod(kwargs).generate()
+
+def python(**kwargs):
+    kwargs['f']  ='unit'
+    kwargs['l']  ='python'
+    codeGenMethod(kwargs).generate()
+
+def cpp(**kwargs):
+    kwargs['f']  ='unit'
+    kwargs['l']  ='cpp'
+    codeGenMethod(kwargs).generate()
+
+def c(**kwargs):
+    kwargs['f']  ='unit'
+    kwargs['l']  ='c'
+    codeGenMethod(kwargs).generate()
+
 class codeGenMethod(cgBasic.c_cgbasic):
     def __init__(self, argsDict):
         cgBasic.c_cgbasic.__init__(self)

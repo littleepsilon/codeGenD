@@ -73,3 +73,31 @@ def app(**kwargs):
     n='appName', li='MIT' or 'apache' or 'gnu3'
     '''
     codeGenMethod.app(**kwargs)
+
+def src(**kwargs):
+    '''
+    generate src file
+    l='python' or 'cpp' or 'c', uf='file_name', n='yourname'
+    '''
+    codeGenMethod.src(**kwargs)
+
+def python(**kwargs):
+    '''
+    generate python src file
+    uf='file_name', n='yourname'
+    '''
+    codeGenMethod.python(**kwargs)
+
+def cpp(**kwargs):
+    '''
+    generate cpp src file
+    uf='file_name', n='yourname'
+    '''
+    codeGenMethod.cpp(**kwargs)
+
+def c(**kwargs):
+    '''
+    generate c src file
+    uf='file_name', n='yourname'
+    '''
+    codeGenMethod.c(**kwargs)
