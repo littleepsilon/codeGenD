@@ -43,6 +43,7 @@ cDict['default']['headers'] = {
 /* global declare
 */
 @global 
+
 /* interface
 */
 @someDeclare 
@@ -83,6 +84,11 @@ cDict['default']['source'] = {
 /* global declare
 */
 @global 
+
+/* local var
+*/
+@localvar 
+
 /* interface
 */
 @someDef 
@@ -96,6 +102,7 @@ cDict['default']['source'] = {
     'packa'        : '1',
     'packb'        : ' ',
     'global'       : ' ',
+    'localvar'     : ' ',
     'someDef'      : ' ',
 }
 

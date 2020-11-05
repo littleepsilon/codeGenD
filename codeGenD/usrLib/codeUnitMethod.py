@@ -44,7 +44,7 @@ class codeUnit(cgBasic.c_cgbasic):
 			else:
 				return '@' + keyStr + ' '
 		tmpStr    = codeBlock
-		labelList = re.findall('@[a-zA-Z0-9_]*', codeBlock)
+		labelList = re.findall('(@[a-zA-Z0-9_]*) ', codeBlock)
 		if not labelList:
 			return tmpStr
 		else:

@@ -43,6 +43,7 @@ cppDict['default']['headers'] = {
 /* global declare
 */
 @global 
+
 /* interface
 */
 @someDeclare 
@@ -82,6 +83,11 @@ cppDict['default']['source'] = {
 /* global declare
 */
 @global 
+
+/* local var
+*/
+@localvar 
+
 /* interface
 */
 @someDef 
@@ -95,6 +101,7 @@ cppDict['default']['source'] = {
     'packa'        : '1',
     'packb'        : ' ',
     'global'       : ' ',
+    'localvar'     : ' ',
     'someDef'      : ' ',
 }
 

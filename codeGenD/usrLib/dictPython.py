@@ -71,3 +71,55 @@ pyDict['default']['layout'] = {
     'import3'      : ' ',
     'subjectBlock' : ' ',
 }
+
+pyDict['default']['setup'] = {
+    'main' : \
+'''
+# -*- coding:utf-8 -*-
+@headers 
+# import pyModule
+# import sys
+# import os
+import setuptools
+@pyModules 
+
+# import 3rd-part Moudle
+@import1 
+# sys.path.append( os.path.split( os.path.realpath(__file__) )[0] + '' )
+@import2 
+# import usrModule
+@import3 
+
+@subjectBlock 
+
+setuptools.setup(
+    name="@projectName ",
+    version="@version ",
+    author="@yourName ",
+    author_email="@email ",
+    description="@projDes ",
+    # long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="@url ",
+    packages=setuptools.find_packages(),
+    include_package_data = True,
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
+''',
+    'headers'      : ' ',
+    'pyModules'    : ' ',
+    'import1'      : ' ',
+    'import2'      : ' ',
+    'import3'      : ' ',
+    'subjectBlock' : ' ',
+    'projectName'  : ' ',
+    'version'      : ' ',
+    'yourName'     : ' ',
+    'email'        : ' ',
+    'projDes'      : ' ',
+    'url'          : ' ',
+}

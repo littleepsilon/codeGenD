@@ -1,7 +1,7 @@
 {
     "default": {
         "headers": {
-            "main": "\n@headStr \n#ifndef _@unitFileName _H_\n#define _@unitFileName _H_\n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n/* interface\n*/\n@someDeclare \n\n#endif /* _@unitFileName _H_ */\n",
+            "main": "\n@headStr \n#ifndef _@unitFileName _H_\n#define _@unitFileName _H_\n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n\n/* interface\n*/\n@someDeclare \n\n#endif /* _@unitFileName _H_ */\n",
             "headStr": " ",
             "unitFileName": " ",
             "dependency": " ",
@@ -14,7 +14,7 @@
             "someDeclare": " "
         },
         "source": {
-            "main": "\n@headStr \n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n/* interface\n*/\n@someDef \n\n",
+            "main": "\n@headStr \n/* dependency\n*/\n@dependency \n/* macro\n*/\n@macro \n/* enum\n*/\n@enum \n/* struct\n*/\n#pragma pack(@packa )\n@struct \n#pragma pack(@packb )\n\n/* global declare\n*/\n@global \n\n/* local var\n*/\n@localvar \n\n/* interface\n*/\n@someDef \n\n",
             "headStr": " ",
             "dependency": " ",
             "macro": " ",
@@ -23,6 +23,7 @@
             "packa": "1",
             "packb": " ",
             "global": " ",
+            "localvar": " ",
             "someDef": " "
         },
         "enum": {

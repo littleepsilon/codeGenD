@@ -16,7 +16,7 @@ import setuptools
 
 setuptools.setup(
     name="codeGenD",
-    version="0.0.5",
+    version="0.0.7",
     author="David Young",
     author_email="david_young11@163.com",
     description="A tiny code generate module",

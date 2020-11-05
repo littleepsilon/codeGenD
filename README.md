@@ -71,38 +71,39 @@ run install.bat (in windows)
 ```
 ├── codeGenCpp.sh
 ├── codeGenD
-│   ├── basic
-│   │   ├── cgBasic.py
-│   │   └── __init__.py
-│   ├── __init__.py
-│   ├── interface
-│   │   ├── __init__.py
-│   │   └── interface.py
-│   ├── test
-│   │   ├── __init__.py
-│   │   └── test.py
-│   ├── usrLib
-│   │   ├── cDict.json
-│   │   ├── codeUnitMethod.py
-│   │   ├── cppDict.json
-│   │   ├── dictCpp.py
-│   │   ├── dictC.py
-│   │   ├── dictProvider.py
-│   │   ├── dictPython.py
-│   │   ├── __init__.py
-│   │   └── pyDict.json
-│   └── usrMethod
-│       ├── codeGenCpp.py
-│       ├── codeGenC.py
-│       ├── codeGenMethod.py
-│       ├── codeGenPy.py
-│       ├── __init__.py
-│       └── readmeMaterial.py
+│   ├── basic
+│   │   ├── cgBasic.py
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── interface
+│   │   ├── __init__.py
+│   │   └── interface.py
+│   ├── test
+│   │   ├── __init__.py
+│   │   └── test.py
+│   ├── usrLib
+│   │   ├── cDict.json
+│   │   ├── codeUnitMethod.py
+│   │   ├── cppDict.json
+│   │   ├── dictCpp.py
+│   │   ├── dictC.py
+│   │   ├── dictProvider.py
+│   │   ├── dictPython.py
+│   │   ├── __init__.py
+│   │   ├── pyDict.json
+│   │   └── snippts.py
+│   └── usrMethod
+│       ├── codeGenCpp.py
+│       ├── codeGenC.py
+│       ├── codeGenMethod.py
+│       ├── codeGenPy.py
+│       ├── __init__.py
+│       └── readmeMaterial.py
 ├── codeGenD.py
 ├── codeGenPy.sh
 ├── codeGen.sh
 ├── dist
-│   └── codeGenD-0.0.5.tar.gz
+│   └── codeGenD-0.0.7.tar.gz
 ├── install.bat
 ├── LICENSE
 ├── makefile

@@ -14,12 +14,28 @@
             "funcBlock": "pass"
         },
         "layout": {
-            "main": "\n# -*- coding:utf-8 -*-\n@headers \n# import pyModule\n# import sys\n# import os\n\n# import 3rd-part Moudle\n@import1 \n# sys.path.append( os.path.split( os.path.realpath(__file__) )[0] + '' )\n@import2 \n# import usrModule\n@import3 \n\n@subjectBlock \n",
+            "main": "\n# -*- coding:utf-8 -*-\n@headers \n# import pyModule\n# import sys\n# import os\n@pyModules \n\n# import 3rd-part Moudle\n@import1 \n# sys.path.append( os.path.split( os.path.realpath(__file__) )[0] + '' )\n@import2 \n# import usrModule\n@import3 \n\n@subjectBlock \n",
             "headers": " ",
+            "pyModules": " ",
             "import1": " ",
             "import2": " ",
             "import3": " ",
             "subjectBlock": " "
+        },
+        "setup": {
+            "main": "\n# -*- coding:utf-8 -*-\n@headers \n# import pyModule\n# import sys\n# import os\nimport setuptools\n@pyModules \n\n# import 3rd-part Moudle\n@import1 \n# sys.path.append( os.path.split( os.path.realpath(__file__) )[0] + '' )\n@import2 \n# import usrModule\n@import3 \n\n@subjectBlock \n\nsetuptools.setup(\n    name=\"@projectName \",\n    version=\"@version \",\n    author=\"@yourName \",\n    author_email=\"@email \",\n    description=\"@projDes \",\n    # long_description=long_description,\n    long_description_content_type=\"text/markdown\",\n    url=\"@url \",\n    packages=setuptools.find_packages(),\n    include_package_data = True,\n    classifiers=[\n        \"Programming Language :: Python :: 3\",\n        \"License :: OSI Approved :: MIT License\",\n        \"Operating System :: OS Independent\",\n    ],\n)\n",
+            "headers": " ",
+            "pyModules": " ",
+            "import1": " ",
+            "import2": " ",
+            "import3": " ",
+            "subjectBlock": " ",
+            "projectName": " ",
+            "version": " ",
+            "yourName": " ",
+            "email": " ",
+            "projDes": " ",
+            "url": " "
         }
     }
 }

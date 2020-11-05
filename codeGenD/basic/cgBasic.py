@@ -20,7 +20,6 @@ import json
 
 class c_cgbasic(object):
     def __init__(self, logSwitch = False, dbgMode = False):
-        self.name      = 'david'
         self.dbgMode   = dbgMode
         self.dbgHex    = True
         self.dbgBin    = True
@@ -32,20 +31,24 @@ class c_cgbasic(object):
                 print(str(self.__class__) + ':--->>' + ' ' + str(msg))
                 if logSwitch and self.logSwitch:
                     logging.info('[' + str(self.__class__) + ']' + ':--->>' + ' ' + str(msg))
-            return
+                return 1
+            return 0
 
         if dbgBin == True:
             if self.dbgBin == True:
                 print(str(self.__class__) + ':--->>' + ' ' + str(msg))
                 if logSwitch and self.logSwitch:
                     logging.error('[' + str(self.__class__) + ']' + ':--->>' + ' ' + str(msg))
-            return
+                return 1
+            return 0
 
         if self.dbgMode == True:
             print(str(self.__class__) + ':--->>' + ' ' + str(msg))
             if logSwitch and self.logSwitch:
                 logging.debug('[' + str(self.__class__) + ']' + ':--->>' + ' ' + str(msg))
-            return
+            return 1
+        
+        return 0
         
 class shellProcesser(c_cgbasic):
     def __init__(self):

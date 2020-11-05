@@ -3,7 +3,7 @@
 # time:        00:55
 # date:        2020-06-15
 # author:      None
-# description: test Description on this line untitled 
+# description: None
 # 
 # import pyModule
 import sys
@@ -212,6 +212,7 @@ int main()
             'packa'        : '1',
             'packb'        : ' ',
             'global'       : ' ',
+            'localvar'     : ' ',
             'someDef'      : ' ',
         }
 

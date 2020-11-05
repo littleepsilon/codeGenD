@@ -16,6 +16,7 @@ import logging
 
 # import usrModule
 import codeGenD
+from codeGenD.test.test import *
 
 if __name__ == '__main__':
 
@@ -58,3 +59,5 @@ test
     codeGenD.out ( tmpDict2.parse( Mode='half' ), fileName='test.src' )
     # 5. -------------------------------------------------------------
     codeGenD.app(n='myApp')
+    # 6. -------------------------------------------------------------
+    testMain()

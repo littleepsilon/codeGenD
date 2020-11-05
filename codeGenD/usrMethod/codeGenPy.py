@@ -19,7 +19,10 @@ from codeGenD.usrLib    import dictProvider
 class codeGenFactoryP(codeGenMethod.codeGenFactory):
 
     def generateUnit(self):
-        self.generatePy()
+        if self.codeGenUnitFile:
+            self.generatePy()
+        if self.codeGenFloader:
+            self.generateSubFloderWorkspace()
 
     def generateSys(self):
         self.generateWorkspace()
@@ -30,6 +33,25 @@ class codeGenFactoryP(codeGenMethod.codeGenFactory):
         self.generateGitIgnore('pySys/')
         self.generateReadme('pySys/')
         self.generateLicense('pySys/')
+        self.generateMANIFEST('pySys/')
+
+    def generateSubFloderWorkspace(self):
+        if self.codeGenFloader:
+            self.codeGenMkdir('root/')
+            self.generateInitPy('root/')
+            floaderList = str(self.codeGenFloader).split()
+            for singleFloader in floaderList:
+                self.codeGenMkdir('root/' + singleFloader)
+                self.generateInitPy('root/' + singleFloader + '/')
+
+    def generateMANIFEST(self, dirname):
+        tmpStr = \
+'''include MANIFEST.in
+recursive-include targetFloder *.someFileExtend
+'''
+
+        with open(dirname + 'MANIFEST.in', 'w+') as initPyFile:
+            initPyFile.write(tmpStr)
 
     def generateWorkspace(self):
         self.codeGenMkdir('pySys')
@@ -42,7 +64,7 @@ class codeGenFactoryP(codeGenMethod.codeGenFactory):
                 self.generateInitPy('pySys/'+str(self.yourname)+'/' + singleFloader + '/')
 
     def generateRequirements(self,dirname):
-        with open(dirname+'requirement.txt', 'w+') as requirementFile:
+        with open(dirname+'requirements.txt', 'w+') as requirementFile:
             requirementFile.close()
 
     def generateInitPy(self, dirname):
@@ -96,10 +118,6 @@ if __name__ == '__main__':
         with open(dirname+'main.py', 'w+') as mainPyFile:
             mainPyFile.write(tmpStr)
 
-    def generateSetup(self,dirname):
-        setupFile = open(dirname+'setup.py', 'w+')
-        setupFile.close()
-
     def generatePy(self):
         pySrcDict = dictProvider.cDict( dictProvider.provide( whichLan = 'python' ) )
         pySrcDict = dictProvider.cDict( pySrcDict['default']['layout'] )
@@ -122,6 +140,34 @@ if __name__ == '__main__':
         dirName = str('pySrc/')
         self.codeGenMkdir(dirName)
         with open(dirName + str(self.codeGenUnitFile)+'.py', 'w+') as pyFile:
+            pyFile.write(tmpStr)
+
+    def generateSetup(self, dirname):
+        pySrcDict = dictProvider.cDict( dictProvider.provide( whichLan = 'python' ) )
+        pySrcDict = dictProvider.cDict( pySrcDict['default']['setup'] )
+
+        plusDict    = {
+            'headers'      : str(self.header()),
+            'pyModules'    : ' ',
+            'import1'      : ' ',
+            'import2'      : ' ',
+            'import3'      : ' ',
+            'subjectBlock' : ' ',
+            'projectName'  : ' ',
+            'version'      : ' ',
+            'yourName'     : ' ',
+            'email'        : ' ',
+            'projDes'      : ' ',
+            'url'          : ' ',
+        }
+
+        pySrcDict += plusDict
+        if self.codeGenAddDictcs:
+            pySrcDict += self.codeGenAddDictcs
+
+        tmpStr = codeUnitMethod.codeUnit().parse(pySrcDict)
+
+        with open(dirname+'setup.py', 'w+') as pyFile:
             pyFile.write(tmpStr)
 
     def header(self):

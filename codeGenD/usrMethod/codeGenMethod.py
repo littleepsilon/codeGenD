@@ -182,7 +182,7 @@ class codeGenFactory(cgBasic.c_cgbasic):
             pass
 
     def generateReadme(self, locationStr):
-        with open(locationStr+'readme.md', 'w+') as readmeFile:
+        with open(locationStr+'README.md', 'w+') as readmeFile:
             readmeFile.write(readmeStrMaterial)
 
     def generateLicense(self, locationStr):
