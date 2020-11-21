@@ -47,7 +47,7 @@ def generate(**kwargs):
     '''
     -m Material argv or file
         argv:
-        -f  Format   unit or system
+        -f  Format   unit or system      unit->just src file / system->project
         -l  language c or cpp or python
             unit:
             -uf   unitFileName
@@ -57,9 +57,9 @@ def generate(**kwargs):
             -des  description
             sys:
             -li license MIT gnu3 apache
-            -fl floaderList
+            -fl floader list of src
 
-            -n author name
+            -n author name   project name in python option
 
         file:
             -cf codeGenFileName

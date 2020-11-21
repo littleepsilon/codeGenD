@@ -21,6 +21,8 @@ clean:
 	-rm -rf cSys
 	-rm -rf cppSys
 	-rm -rf pySys
+	-rm -rf build
+	-rm -rf codeGenD.egg-info
 
 	-rm *.json
 	-rm *.src
